@@ -9,8 +9,8 @@ module Autoparts
       description 'Leiningen: A build automation and dependency management tool for Clojure'
       category Category::PROGRAMMING_LANGUAGES
 
-      source_url 'https://leiningen.s3.amazonaws.com/downloads/leiningen-2.3.2-standalone.jar'
-      source_sha1 'ed6f93be75c796408544042cfd26699d45b49725'
+      source_url 'https://leiningen.s3.amazonaws.com/downloads/leiningen-2.3.4-standalone.jar'
+      source_sha1 '59718bb8553f25b8ca853f57dd259cd81eb16f91'
       source_filetype 'jar'
 
       def install
@@ -18,7 +18,7 @@ module Autoparts
         execute 'mv', archive_filename, prefix_path
 
         puts "=> Downloading the lein script..."
-        download 'https://raw.github.com/technomancy/leiningen/2.3.2/bin/lein-pkg', tmp_lein_script_path, '4a23609f085add58bc28fb0669a175fe2b26f26f'
+        download 'https://raw.github.com/technomancy/leiningen/2.3.4/bin/lein-pkg', tmp_lein_script_path, '34988b80c6dd02e27266c1b1336e435c9d2b1209'
 
         bin_path.mkpath
         execute 'mv', tmp_lein_script_path, lein_executable_path
